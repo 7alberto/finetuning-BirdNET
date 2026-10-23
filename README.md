@@ -78,15 +78,15 @@ Convert and normalize audio files:
 python build_dataset.py   \
   --audio-source /path/to/raw/audio   \
   --dataset-path segments   \
-  --bird-tags-files Bird_tags_Train.mat Bird_tags_Test.mat   \
+  --bird-tags-files /path/to/train/labels /path/to/test/labels   \
   --species-dict BirdNET_GLOBAL_6K_V2.4_Labels_en_uk.txt
 ```
 
 Integrate annotated segments:
 ```bash
 python preprocessing.py integrate-segments   
-  --audio-source Tovanella   \
-  --annotation-file Birds_tags_Train_2.mat   \
+  --audio-source /path/to/raw/audio   \
+  --annotation-file /path/to/train/labels   \
   --labels-file BirdNET_GLOBAL_6K_V2.4_Labels_en_uk.txt
 ```
 
